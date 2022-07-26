@@ -1,0 +1,9 @@
+<h1>Quiz</h1>
+
+<ul class="quiz-list">
+    {% for quiz in quizzes %}
+        <li class="quiz-item">
+            <a href="{% url 'show' quiz %}">{{ quiz }}</a>
+        </li>
+    {% endfor %}
+</ul>

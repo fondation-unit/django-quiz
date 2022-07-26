@@ -1,0 +1,18 @@
+{% load static %}
+
+<h1>Quiz {{ name }}</h1>
+
+<div id="h5p-container"></div>
+
+<a href="{% url 'index' %}">Retour</a>
+
+<script type="text/javascript" src="{% static 'dist/main.bundle.js' %}"></script>
+<script>
+    const el = document.getElementById('h5p-container');
+    const options = {
+    h5pJsonPath:  "{% static 'quiz/'|add:name %}",
+        frameJs: "{% static 'dist/frame.bundle.js' %}",
+        frameCss: "{% static 'dist/styles/h5p.css' %}",
+    }
+    new H5PStandalone.H5P(el, options);
+</script>
