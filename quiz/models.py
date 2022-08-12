@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.db import models
 import os
+
 
 def get_quizzes():
     path = os.path.dirname(os.path.abspath(__file__))
@@ -8,10 +9,3 @@ def get_quizzes():
         if it.is_dir():
             name = it.path.split('/')[-1]
             yield name
-
-def index(request):
-    quizzes = list(get_quizzes())
-    return render(request, 'quiz/index.html', {'quizzes': quizzes})
-
-def show(request, name):
-    return render(request, 'quiz/show.html', {'name': name})

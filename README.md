@@ -31,4 +31,4 @@ path('quiz/', include('quiz.urls')),
 
 3. Move back into the project directory
 
-4. Install the app `pip install django-quiz/dist/django-quiz-1.0.tar.gz`
+4. Install the app `pip install django-quiz/dist/django-quiz-1.1.tar.gz`
