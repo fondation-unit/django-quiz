@@ -50,3 +50,6 @@ coverage.xml
 docs/_build/
 
 .DS_Store
+
+# Include the whole app statics
+!quiz/static/**/*
