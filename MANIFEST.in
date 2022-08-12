@@ -1,4 +1,3 @@
 include LICENSE
 include README.rst
 recursive-include quiz/static *
-recursive-include quiz/templates *
